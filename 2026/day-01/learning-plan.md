@@ -22,7 +22,8 @@
 
 # How you will stay consistent every single day?
 
-:) Study minimum 2-3 hours(No zero days)
+:) 
+- Study minimum 2-3 hours(No zero days)
 - Document learning publicly ( Linkedin/GitHub )
 - Focus on progress
 - No excuses - discipline over motivation
