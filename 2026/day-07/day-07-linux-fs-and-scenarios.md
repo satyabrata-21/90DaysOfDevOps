@@ -10,6 +10,7 @@
   
 What it contains:
 - The top-level directory of Linux. Every file and folder on the system starts from here.
+  
 I would use this whe:
 - I need to understand the overall filesystem structure or verify mounted directories.
 
