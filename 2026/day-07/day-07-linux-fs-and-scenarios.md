@@ -81,4 +81,12 @@ What it contains:
 I would use this whe:
 - Managing manually installed applications like enterprise tools or vendor software.
 
+---
+
+### Part 2: Scenario-Based Practice (40 minutes)
+
+**Important:** Focus on understanding the **troubleshooting flow**, not memorizing commands. Use the hints!
+
+---
+
 
