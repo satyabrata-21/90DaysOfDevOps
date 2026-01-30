@@ -59,7 +59,7 @@ I would use this whe:
 
 - `/bin` - Essential command binaries
   
-  What it contains:
+ What it contains:
 - Essential command binaries required for the system to boot and run.
   
 I would use this whe:
@@ -67,7 +67,7 @@ I would use this whe:
   
 - `/usr/bin` - User command binaries
   
-  What it contains:
+What it contains:
 - Most user-level command binaries and installed tools.
   
 I would use this whe:
@@ -75,7 +75,7 @@ I would use this whe:
   
 - `/opt` - Optional/third-party applications
   
-  What it contains:
+What it contains:
 - Optional or third-party software installed outside the default package manager.
   
 I would use this whe:
