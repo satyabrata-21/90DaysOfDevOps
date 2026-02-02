@@ -20,4 +20,6 @@ Esc :wq
 - chmod -x script.sh
 
 ## What I Learned
-
+- Create and read files using touch, cat, vim
+- Understand and modify permissions using chmod
+- 
