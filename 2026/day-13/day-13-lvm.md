@@ -2,7 +2,7 @@
 Today I practiced complete LVM setup and cleanup — from creating Physical Volumes to safely removing everything and deleting the AWS volume.***
 
 **LVM Setup:**
-Create a Physical Volume(PV):
+- Create a Physical Volume(PV):
 - I have used command below for PV creation:
 - pvcreate /dev/xvdf
 - verify PV: pvdisplay
