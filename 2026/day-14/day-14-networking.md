@@ -13,6 +13,7 @@
   - Internet – IP addressing & routing
   - Transport – TCP / UDP
   - Application – HTTP, HTTPS, DNS, SSH, etc.
+    
   ***OSI = 7 layers (theoretical model) and TCP/IP = 4 layers (practical implementation model)***
 
 ## Where Protocols Sit
@@ -20,23 +21,8 @@
 - TCP/UDP → Transport (OSI L4)
 - HTTP/HTTPS → Application (OSI L7)
 - DNS → Application (OSI L7)
+  
 ***One real example: “curl https://example.com = App layer over TCP over IP”***
 
-┌─────────────────────────────┐
-│  Application Layer          │
-│  curl → HTTPS request       │
-└──────────────⬇──────────────┘
-┌─────────────────────────────┐
-│  Transport Layer            │
-│  TCP (Port 443)             │
-└──────────────⬇──────────────┘
-┌─────────────────────────────┐
-│  Network Layer              │
-│  IP (Routing packets)       │
-└──────────────⬇──────────────┘
-┌─────────────────────────────┐
-│  Link Layer                 │
-│  Ethernet / WiFi (MAC)      │
-└─────────────────────────────┘
-
+### Application Layer / curl → HTTPS request -> Transport Layer / TCP (Port 443) ->Network Layer /IP (Routing packets)->  Link Layer/Ethernet / WiFi (MAC)
 
