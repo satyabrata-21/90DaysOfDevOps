@@ -27,13 +27,20 @@
 ### Application Layer / curl → HTTPS request -> Transport Layer / TCP (Port 443) ->Network Layer /IP (Routing packets)->  Link Layer/Ethernet / WiFi (MAC)
 
 ## Hands-on Checklist (run these; add 1–2 line observations)
-- **Identity:** `hostname -I` (or `ip addr show`) — note your IP.
-- **Reachability:** `ping google.com` — mention latency and packet loss.
-- **Path:** `traceroute google.com` (or `tracepath`) — note any long hops/timeouts.
-- **Ports:** `ss -tulpn` (or `netstat -tulpn`) — list one listening service and its port.
-- **Name resolution:** `dig google.com` or `nslookup google.com` — record the resolved IP.
-- **HTTP check:** `curl -I google.com` — note the HTTP status code.
-- **Connections snapshot:** `netstat -an | head` — count ESTABLISHED vs LISTEN (rough).
+- **Identity:** `hostname -I` (or `ip addr show`) —
+- ### Observation: IP address is 192.168.1.10 (private LAN IP).
+- **Reachability:** `ping google.com` —
+- ### Observation: Avg latency ~25 ms - 0% packet loss - Internet connectivity is healthy. (If packet loss >0% → possible network instability.)
+- **Path:** `traceroute google.com` (or `tracepath`) —
+- ### Observation:  ~12 hops to reach destination - One hop showed higher latency (~120 ms) - Possible ISP or upstream delay. - (If timeouts * * * appear → firewall or ICMP blocked.)
+- **Ports:** `ss -tulpn` (or `netstat -tulpn`) —
+- ### Observation: SSH service listening on port 22 - Service = sshd - Server allows SSH connections.
+- **Name resolution:** `dig google.com` or `nslookup google.com` —
+- ### Observation: Resolved to IP 142.x.x.x - DNS resolution working properly.
+- **HTTP check:** `curl -I google.com` —
+- ### Observation: HTTP status: 200 OK - Web server reachable and responding.
+- **Connections snapshot:** `netstat -an | head` —
+- ### Observation: ~3 ESTABLISHED connections - ~5 LISTEN sockets - System actively communicating and services running.
 
   
 ## Mini Task: Port Probe & Interpret
