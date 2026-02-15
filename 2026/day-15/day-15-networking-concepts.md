@@ -106,3 +106,19 @@
 - examples: Web server, SSH, Database, Email, FTP
 - Ports help the system know which service should receive the data.
 - Without ports → the system would not know where to send the traffic.
+
+# Task 5: Putting It Together
+***You run `curl http://myapp.com:8080` — what networking concepts from today are involved?***
+- curl http://myapp.com:8080
+->  What happens?
+- First, DNS finds the IP address of myapp.com.
+- Then your computer connects to that IP using port 8080.
+- The server sends back the response, and curl shows it.
+- Simple: Name → IP → Port → Response
+
+***Your app can't reach a database at `10.0.1.50:3306` — what would you check first?***
+-> What to check first?
+- Check if 10.0.1.50 is reachable (network working or not).
+- Check if port 3306 (database port) is open.
+- Check if firewall is blocking it.
+- Simple: Network → Port → Firewall
