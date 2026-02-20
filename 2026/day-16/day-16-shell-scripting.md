@@ -6,8 +6,8 @@ Shell Scripting Basics
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-[Script](hello.sh)
-![Shell Output](hello.png)
+[Script](scripts/hello.sh)
+![Shell Output](images/hello.png)
 
 
 * What happens if you remove the shebang line?
@@ -26,14 +26,15 @@ Shell Scripting Basics
    - A variable for your `ROLE` (e.g., "DevOps Engineer")
    - Print: `Hello, I am <NAME> and I am a <ROLE>`
 
-[Script](variables.sh)
-![Shell output](variables.png)
+[Script](scripts/variables.sh)
+![Shell output](images/variables.png)
+
 2. Try using single quotes vs double quotes — what's the difference?
  * Using double quote `" "` - Allow **variable expansion** (variables work)
  * Using single quote `' '` - print exactly what you type
 
 
----
+
 
 ### Task 3: User Input with read
 1. Create `greet.sh` that:
@@ -41,27 +42,26 @@ Shell Scripting Basics
    - Asks for their favourite tool
    - Prints: `Hello <name>, your favourite tool is <tool>`
 
-[Script](greet.sh)
-![Shell output](input.png)
+[Script](scripts/greet.sh)
+![Shell output](images/input.png)
 
----
 
 ### Task 4: If-Else Conditions
 1. Create `check_number.sh` that:
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
-[Script](check_number.sh)
-![Shell Output](if.png)
+[Script](scripts/check_number.sh)
+![Shell Output](images/if.png)
 
 2. Create `file_check.sh` that:
    - Asks for a filename
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
 
-[Script](file_check.sh)
-![Shell output](file_exist.png)
----
+[Script](scripts/file_check.sh)
+![Shell output](images/file_exist.png)
+
 
 ### Task 5: Combine It All
 Create `server_check.sh` that:
@@ -71,8 +71,7 @@ Create `server_check.sh` that:
 4. If `n` — prints "Skipped."
 
 
-[Script](server_check.sh)
-![Shell output](server-check.sh)
----
 
 
+[Script](scripts/server_check.sh)
+![Shell output](images/server-check.png)
