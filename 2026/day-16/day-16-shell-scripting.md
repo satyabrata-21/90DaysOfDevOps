@@ -26,8 +26,8 @@ Shell Scripting Basics
    - A variable for your `ROLE` (e.g., "DevOps Engineer")
    - Print: `Hello, I am <NAME> and I am a <ROLE>`
 
-[Script](variables.sh)
-![Shell output](variables.png)
+[Script](scripts/variables.sh)
+![Shell output](images/variables.png)
 2. Try using single quotes vs double quotes — what's the difference?
  * Using double quote `" "` - Allow **variable expansion** (variables work)
  * Using single quote `' '` - print exactly what you type
@@ -41,8 +41,8 @@ Shell Scripting Basics
    - Asks for their favourite tool
    - Prints: `Hello <name>, your favourite tool is <tool>`
 
-[Script](greet.sh)
-![Shell output](input.png)
+[Script](scripts/greet.sh)
+![Shell output](images/input.png)
 
 ---
 
@@ -51,16 +51,16 @@ Shell Scripting Basics
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
-[Script](check_number.sh)
-![Shell Output](if.png)
+[Script](scripts/check_number.sh)
+![Shell Output](images/if.png)
 
 2. Create `file_check.sh` that:
    - Asks for a filename
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
 
-[Script](file_check.sh)
-![Shell output](file_exist.png)
+[Script](scripts/file_check.sh)
+![Shell output](images/file_exist.png)
 ---
 
 ### Task 5: Combine It All
@@ -71,38 +71,8 @@ Create `server_check.sh` that:
 4. If `n` — prints "Skipped."
 
 
-[Script](server_check.sh)
-![Shell output](server-check.sh)
+[Script](scripts/server_check.sh)
+![Shell output](images/server-check.sh)
 ---
 
-## Hints
-- Shebang: `#!/bin/bash` tells the system which interpreter to use
-- Variables: `NAME="Shubham"` (no spaces around `=`)
-- Read: `read -p "Enter name: " NAME`
-- If syntax: `if [ condition ]; then ... elif ... else ... fi`
-- File check: `if [ -f filename ]; then`
 
----
-
-## Documentation
-
-Create `day-16-shell-scripting.md` with:
-- Each script's code and output
-- What you learned (3 key points)
-
----
-
-## Submission
-1. Add your scripts and `day-16-shell-scripting.md` to `2026/day-16/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-
-Share your first shell scripts on LinkedIn.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
