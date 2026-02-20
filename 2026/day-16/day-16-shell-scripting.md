@@ -6,7 +6,7 @@ Shell Scripting Basics
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-[Script](scrips/hello.sh)
+[Script](scripts/hello.sh)
 ![Shell Output](images/hello.png)
 
 
