@@ -6,8 +6,8 @@ Shell Scripting Basics
 3. Print `Hello, DevOps!` using `echo`
 4. Make it executable and run it
 
-[Script](hello.sh)
-![Shell Output](hello.png)
+[Script](scrips/hello.sh)
+![Shell Output](images/hello.png)
 
 
 * What happens if you remove the shebang line?
