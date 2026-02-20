@@ -72,4 +72,4 @@ Create `server_check.sh` that:
 
 
 [Script](scripts/server_check.sh)
-![Shell output](images/server-check.sh)
+![Shell output](images/server-check.png)
