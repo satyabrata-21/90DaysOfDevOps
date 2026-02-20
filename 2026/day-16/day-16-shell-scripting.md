@@ -28,12 +28,13 @@ Shell Scripting Basics
 
 [Script](scripts/variables.sh)
 ![Shell output](images/variables.png)
+
 2. Try using single quotes vs double quotes — what's the difference?
  * Using double quote `" "` - Allow **variable expansion** (variables work)
  * Using single quote `' '` - print exactly what you type
 
 
----
+
 
 ### Task 3: User Input with read
 1. Create `greet.sh` that:
@@ -44,7 +45,6 @@ Shell Scripting Basics
 [Script](scripts/greet.sh)
 ![Shell output](images/input.png)
 
----
 
 ### Task 4: If-Else Conditions
 1. Create `check_number.sh` that:
@@ -61,7 +61,7 @@ Shell Scripting Basics
 
 [Script](scripts/file_check.sh)
 ![Shell output](images/file_exist.png)
----
+
 
 ### Task 5: Combine It All
 Create `server_check.sh` that:
@@ -73,6 +73,6 @@ Create `server_check.sh` that:
 
 [Script](scripts/server_check.sh)
 ![Shell output](images/server-check.sh)
----
+
 
 
