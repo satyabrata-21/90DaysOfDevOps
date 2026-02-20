@@ -75,34 +75,4 @@ Create `server_check.sh` that:
 ![Shell output](server-check.sh)
 ---
 
-## Hints
-- Shebang: `#!/bin/bash` tells the system which interpreter to use
-- Variables: `NAME="Shubham"` (no spaces around `=`)
-- Read: `read -p "Enter name: " NAME`
-- If syntax: `if [ condition ]; then ... elif ... else ... fi`
-- File check: `if [ -f filename ]; then`
 
----
-
-## Documentation
-
-Create `day-16-shell-scripting.md` with:
-- Each script's code and output
-- What you learned (3 key points)
-
----
-
-## Submission
-1. Add your scripts and `day-16-shell-scripting.md` to `2026/day-16/`
-2. Commit and push to your fork
-
----
-
-## Learn in Public
-
-Share your first shell scripts on LinkedIn.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
