@@ -7,9 +7,8 @@ Create `log_rotate.sh` that:
 3. Deletes `.gz` files older than 30 days
 4. Prints how many files were compressed and deleted
 5. Exits with an error if the directory doesn't exist
-
-[Script](log_rotate.sh)
-![Output](log_rotate.png)
+[Script](scripts/log_rotate.sh)
+![Output](images/log_rotate.png)
 
 
 ## Task 2: Server Backup Script
@@ -20,8 +19,8 @@ Create `backup.sh` that:
 4. Prints archive name and size
 5. Deletes backups older than 14 days from the destination
 6. Handles errors — exit if source doesn't exist
-[Script](backup.sh)
-![Output](backup.png)
+[Script](scripts/backup.sh)
+![Output](images/backup.png)
 ---
 
 ## Task 3: Crontab
@@ -53,5 +52,6 @@ Create `maintenance.sh` that:
 3. Logs all output to `/var/log/maintenance.log` with timestamps
 4. Write the cron entry to run it daily at 1 AM
 
-[Script](maintenance.sh)
-![Output](maintenance.png)
+
+[Script](scripts/maintenance.sh)
+![Output](images/maintenance.png)
