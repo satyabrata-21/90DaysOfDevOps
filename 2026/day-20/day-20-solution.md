@@ -6,11 +6,19 @@ Your script should:
 2. Exit with a clear error message if no argument is provided
 3. Exit with a clear error message if the file doesn't exist
 
+[Script](scripts/input_validation.sh)
+![Output](images/input_validation.png)
+
+
 ---
 
 ## Task 2: Error Count
 1. Count the total number of lines containing the keyword `ERROR` or `Failed`
 2. Print the total error count to the console
+
+[Script](scripts/error_count.sh)
+![Output](images/error_count.png)
+
 
 ---
 
@@ -24,7 +32,8 @@ Example output:
 Line 84: 2025-07-29 10:15:23 CRITICAL Disk space below threshold
 Line 217: 2025-07-29 14:32:01 CRITICAL Database connection lost
 ```
-
+[Script](scripts/critical_events.sh)
+![Output](images/critical_events.png)
 ---
 
 ## Task 4: Top Error Messages
@@ -41,7 +50,8 @@ Example output:
 15 Disk I/O error
 9  Out of memory
 ```
-
+[Script](scripts/top_errors.sh)
+![Output](images/top_errors.png)
 ---
 
 ## Task 5: Summary Report
@@ -52,7 +62,8 @@ Generate a summary report to a text file named `log_report_<date>.txt` (e.g., `l
 4. Total error count
 5. Top 5 error messages with their occurrence count
 6. List of critical events with line numbers
-
+[Script](scripts/summary_report.sh)
+![Output](images/summary_report.png)
 ---
 
 ## Task 6 (Optional): Archive Processed Logs
