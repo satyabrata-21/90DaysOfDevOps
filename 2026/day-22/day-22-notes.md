@@ -12,7 +12,7 @@
 ### Verify your configuration
 - git config --global --list
 
-![git]{images/git_1.png}
+![git](images/git_1.png)
 
 ## Task 2: Create Your Git Project
 
@@ -28,7 +28,7 @@
 ### Explore the hidden `.git/` directory — look at what's inside
 - ls -la : to show all hidden file & dir's
 - " HEAD  branches  config  description  hooks  info  objects  refs " : inside .git
-![git]{images/git_2.png}
+![git](images/git_2.png)
 
 ## Task 3: Create Your Git Commands Reference
 ### Create a file called `git-commands.md` inside the repo
@@ -52,7 +52,7 @@
 - git commit -m "Add Git commands " : Commit with a meaningful message
 - View your commit history : git log / git log --oneline
 
-![git]{images/git_4.png}
+![git](images/git_4.png)
 
 ## Task 5: Make More Changes and Build History
 - vim git-commands.md : Edit `git-commands.md` — add more commands as you discover them
@@ -61,7 +61,7 @@
 - Repeat this process at least **3 times** so you have multiple commits in your history
 - git log --oneline : View the full history in a compact format
 
-![git]{images/git_5.png}
+![git](images/git_5.png)
 
 ## Task 6: Understand the Git Workflow
 1. What is the difference between `git add` and `git commit`?
