@@ -99,6 +99,8 @@ iii. After forking, how do you keep your fork in sync with the original repo?
 - After forking, you can keep your fork in sync with the original repository by adding the original repository as a remote (often named `upstream`) and regularly fetching and merging changes from it. The commands are:
 ```bash
 git remote add upstream https://github.com/original-owner/original-repo.git
+git checkout main
 git fetch upstream
 git merge upstream/main
+git push origin main
 ``` 
