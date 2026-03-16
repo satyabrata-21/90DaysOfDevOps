@@ -1,35 +1,50 @@
 # Day 25 – Git Reset vs Revert & Branching Strategies
 
-## Task
-
-You'll learn how to **undo mistakes** safely — one of the most important skills in Git. You'll also explore **branching strategies** used by real engineering teams to manage code at scale.
-
----
-
-## Expected Output
-- A markdown file: `day-25-notes.md` with your observations and answers
+## Challenge Tasks
 - Continue updating `git-commands.md` in your `devops-git-practice` repo
 
----
-
-## Challenge Tasks
 
 ### Task 1: Git Reset — Hands-On
 1. Make 3 commits in your practice repo (commit A, B, C)
+![Output](images/Task-1(1).png)
+
 2. Use `git reset --soft` to go back one commit — what happens to the changes?
+![Output](images/Task-1(2).png)
+- The changes are still staged and the last commit C is ready to be committed again.
+
 3. Re-commit, then use `git reset --mixed` to go back one commit — what happens now?
+![Output](images/Task-1(3).png)
+- Commit C removed from history.Changes from commit C remain in working directory. Changes are unstaged. 
+
 4. Re-commit, then use `git reset --hard` to go back one commit — what happens this time?
+![Output](images/Task-1(4).png)
+- Commit C removed. Changes deleted permanently.Working directory reset to previous commit.
+- All changes from commit C are lost.
+
 5. Answer in your notes:
    - What is the difference between `--soft`, `--mixed`, and `--hard`?
+   - `--soft` → Moves the commit back but keeps changes staged.
+   - `--mixed` → Moves the commit back and unstages the changes (files stay in your folder).
+   - `--hard` → Moves the commit back and deletes all changes from staging and files.
+
    - Which one is destructive and why?
+   - `--hard` is destructive because it permanently deletes changes from the commit and cannot be undone.
+
    - When would you use each one?
+   - `--soft` : when you want to undo a commit but keep changes staged,for example to edit the commit message.
+   - `--mixed`: when you want to undo a commit and unstage changes,so you can modify them before recommitting.
+   - `--hard`: when you want to completely remove commits and all changes.
+
    - Should you ever use `git reset` on commits that are already pushed?
+   No,once commits are pushed,others may have already pulled and worked on them,so resetting them can cause confusion and conflicts.
 
 ---
 
 ### Task 2: Git Revert — Hands-On
 1. Make 3 commits (commit X, Y, Z)
+![Output](images/Task-2(1).png)
 2. Revert commit Y (the middle one) — what happens?
+
 3. Check `git log` — is commit Y still in the history?
 4. Answer in your notes:
    - How is `git revert` different from `git reset`?
@@ -43,11 +58,10 @@ Create a comparison in your notes:
 
 | | `git reset` | `git revert` |
 |---|---|---|
-| What it does | Can rewrite history.Moves the branch pointer to an earlier commit | Creates a new commit that undoes changes from a previous commit.Keeps original commit in history |
-| Removes commit from history? | Yes | No |
-| Safe for shared/pushed branches? | No | Yes |
-| When to use | When you want to rewrite history or completely remove commits | On branches that are already pushed/shared.To undo a commit without breaking history |
-
+| What it does | ? | ? |
+| Removes commit from history? | ? | ? |
+| Safe for shared/pushed branches? | ? | ? |
+| When to use | ? | ? |
 
 ---
 
@@ -59,20 +73,6 @@ Research the following branching strategies and document each in your notes with
 - Pros and cons
 
 1. **GitFlow** — develop, feature, release, hotfix branches
-### How it works:
-- `main` branch holds production-ready code
-- `develop` branch is where all development happens
-- `Feature` branches are created from `develop` for new features
-- `Release` branches are created from `develop` when preparing for a release
-- `Hotfix` branches are created from `main` to quickly fix production issues
-### Diagram:
-```main
-|-- develop
-    |-- feature/feature-name
-    |-- release/release-name
-|-- hotfix/hotfix-name
-```
-### When used:
 2. **GitHub Flow** — simple, single main branch + feature branches
 3. **Trunk-Based Development** — everyone commits to main, short-lived branches
 4. Answer:
@@ -93,25 +93,3 @@ Update your `git-commands.md` to cover everything from Days 22–25:
 - Reset & Revert
 
 ---
-
-## Hints
-- `git reflog` is your safety net — it shows everything Git has done, even after a hard reset
-- For branching strategies, look at how projects like Kubernetes, React, or Linux kernel manage branches
-
----
-
-## Submission
-1. Add your `day-25-notes.md` to `2026/day-25/`
-2. Update `git-commands.md` — commit and push
-3. Push to your fork
-
----
-
-## Learn in Public
-
-Share your Reset vs Revert comparison or your branching strategy notes on LinkedIn.
-
-`#90DaysOfDevOps` `#DevOpsKaJosh` `#TrainWithShubham`
-
-Happy Learning!
-**TrainWithShubham**
