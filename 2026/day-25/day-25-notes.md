@@ -184,4 +184,6 @@ Update your `git-commands.md` to cover everything from Days 22–25:
 
 https://github.com/satyabrata-21/devops-git-practice/blob/main/git-commands.md
 
+finish updating your reference guide with clear explanations and examples for each command. This will be a valuable resource for you to refer back to as you continue learning Git and working on projects.
+
 ---
