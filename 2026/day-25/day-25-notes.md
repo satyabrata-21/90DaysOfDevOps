@@ -44,12 +44,23 @@
 1. Make 3 commits (commit X, Y, Z)
 ![Output](images/Task-2(1).png)
 2. Revert commit Y (the middle one) — what happens?
+![Output](images/Task-2(2).png)
+- A new commit is created that undoes the changes from commit Y. The original commit Y remains in the history, but its changes are reversed in the codebase.   
 
 3. Check `git log` — is commit Y still in the history?
+Yes, commit Y is still in the history, but it has been reverted by a new commit that undoes its changes.
+
 4. Answer in your notes:
    - How is `git revert` different from `git reset`?
+   - reset rewrites history, revert preserves history
+   - Revert creates a new commit that undoes changes, while reset moves the HEAD back and can remove commits from history.
+
    - Why is revert considered **safer** than reset for shared branches?
+   - Because it doesn't rewrite history, so it won't cause issues for other collaborators who may have based their work on the original commits.
+
    - When would you use revert vs reset?
+   - Use revert when you want to undo changes in a shared branch without affecting the commit history. Use reset when you want to undo commits in a local branch and are sure that those commits haven't been shared with others.
+
 
 ---
 
@@ -58,10 +69,11 @@ Create a comparison in your notes:
 
 | | `git reset` | `git revert` |
 |---|---|---|
-| What it does | ? | ? |
-| Removes commit from history? | ? | ? |
-| Safe for shared/pushed branches? | ? | ? |
-| When to use | ? | ? |
+| What it does | Can rewrite history.Moves the branch pointer to an earlier commit | Creates a new commit that undoes changes from a previous commit.Keeps original commit in history |
+| Removes commit from history? | Yes | No |
+| Safe for shared/pushed branches? | No | Yes |
+| When to use | When you want to rewrite history or completely remove commits | On branches that are already pushed/shared.To undo a commit without breaking history |
+
 
 ---
 
@@ -73,12 +85,90 @@ Research the following branching strategies and document each in your notes with
 - Pros and cons
 
 1. **GitFlow** — develop, feature, release, hotfix branches
+
+ **GitFlow**
+    
+    **How it works:**
+
+    - `main`      : Contains production-ready code.Every commit here is a stable release.
+        
+    - `develop`   : The integration branch where new features are merged before they’re ready to go live.
+    
+    - `feature`   : For building out new functionality.Created from develop and merged back when complete.
+        
+    - `release`   : Used to prep a new version for production.Created from develop and merged into both main and develop.
+
+    - `hotfix`   : For urgent fixes on production.Created from main,then merged back into both main and develop.
+
+   **When/where it's used:**
+
+    - Team follows scheduled release cycles
+
+    - Need to maintain multiple versions
+
+    **Pros:** 
+    - Clear separation of concerns across features,releases,and hotfixes.
+
+    **Cons:** 
+    - Can result in long-lived branches,increasing the risk of merge conflicts.
+
+
+
 2. **GitHub Flow** — simple, single main branch + feature branches
+
+**GitHub Flow**
+
+    **How it works:**
+
+    - Create a `feature branch` from `main`
+    - Push commits to the `feature branch`
+    - Open a pull request for code review and automated tests.
+    - Once approved, merge back to `main`.
+    - Deploy immediately.
+    - Everything in main should always be production-ready.
+  **When/where it's used:**
+    - ship frequent,small releases
+
+     **Pros:**
+    - Fast merge & deploy
+    
+     **Cons:**
+     - In large teams,it can result in frequent merge conflicts
+
+
 3. **Trunk-Based Development** — everyone commits to main, short-lived branches
+
+ **Trunk-Based Development**
+
+    **How it works:**
+
+    - There’s one `main` branch, often called main or trunk. All development happens here
+    - Developers commit directly to `main`, often multiple times per day
+    - Changes are small,incremental
+       - Feature flags are used to hide incomplete features in production
+       - Long-lived branches are avoided to minimize merge conflicts
+
+ **When/where it's used:**
+    - building SaaS products or anything that updates frequently
+
+
+    **Pros:**
+    - Delivers the fastest feedback from dev to prod
+
+    **Cons:**
+    - Can be risky without tests and CI/CD in place, as broken code can affect everyone.
+
 4. Answer:
    - Which strategy would you use for a startup shipping fast?
+    - Trunk-Based Development
+
    - Which strategy would you use for a large team with scheduled releases?
+      - GitFlow
+
    - Which one does your favorite open-source project use? (check any repo on GitHub)
+      - GitHub Flow
+      - https://github.com/satyabrata-21/retail-demo-store
+
 
 ---
 
@@ -91,5 +181,7 @@ Update your `git-commands.md` to cover everything from Days 22–25:
 - Merging & Rebasing
 - Stash & Cherry Pick
 - Reset & Revert
+
+https://github.com/satyabrata-21/devops-git-practice/blob/main/git-commands.md
 
 ---
