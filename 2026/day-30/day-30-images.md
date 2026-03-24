@@ -44,7 +44,7 @@
 
 
 5. Remove an image you no longer need
-    `docker rmi <image_id>` or `docker image rmi <image_name>`
+    - `docker rmi <image_id>` or `docker image rmi <image_name>`
 ![Output](images/Task-1(5).png)
 
 ---
@@ -103,28 +103,28 @@ Check `docker ps -a` after each step — observe the state changes.
 
 ### Task 5: Cleanup
 1. Stop all running containers in one command
-   `docker stop $(docker ps -aq)`
-   `docker rm $(docker ps -aq)`
-   `docker rmi $(docker images -q)`
-   `docker system prune -a` (removes all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes)
-   `docker system df` (shows disk usage)
-   `docker image prune -a` (removes all unused images, not just dangling ones)
-   `docker container prune` (removes all stopped containers)
-   `docker volume prune` (removes all unused volumes)
-   `docker network prune` (removes all unused networks)
-   `docker system prune` (removes all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes)
+  - `docker stop $(docker ps -aq)`
+  - `docker rm $(docker ps -aq)`
+  - `docker rmi $(docker images -q)`
+  - `docker system prune -a` (removes all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes)
+  -  `docker system df` (shows disk usage)
+  - `docker image prune -a` (removes all unused images, not just dangling ones)
+  - `docker container prune` (removes all stopped containers)
+  - `docker volume prune` (removes all unused volumes)
+  - `docker network prune` (removes all unused networks)
+  - `docker system prune` (removes all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes)
 2. Remove all stopped containers in one command
-   `docker rm $(docker ps -a -q)`
+  - `docker rm $(docker ps -a -q)`
 3. Remove unused images
 ![Output](images/Task-5(1).png)
-   `docker rmi $(docker images -q)`
+  - `docker rmi $(docker images -q)`
 
 4. Check how much disk space Docker is using
-    `docker system df` -check disk usage before cleanup
-    `docker system prune -a` - remove all unused data
-    `docker image prune -a` - removes all unused images
-    `docker builder prune` - removes build cache
-    `docker system df` - check disk usage after cleanup
+   - `docker system df` -check disk usage before cleanup
+   - `docker system prune -a` - remove all unused data
+   - `docker image prune -a` - removes all unused images
+   - `docker builder prune` - removes build cache
+   - `docker system df` - check disk usage after cleanup
     ![Output](images/Task-5(4).png)
 
 ---
