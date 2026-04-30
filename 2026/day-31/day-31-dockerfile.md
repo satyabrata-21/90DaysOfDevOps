@@ -45,6 +45,8 @@ Build and run it. Understand what each line does.
     - Run with additional arguments: When you pass arguments (e.g., `hello-world`), they are appended to the ENTRYPOINT, so it runs echo `hello-world` and outputs: `hello-world`.    
 
 3. Write in your notes: When would you use CMD vs ENTRYPOINT?
+    - Use CMD when you want a default command that can be overridden. Use ENTRYPOINT when the container should always run a specific executable, with optional extra arguments.
+    
     - Use CMD when you want to provide a default command that can be changed easily when you run the container.
 
     - Use ENTRYPOINT when you want to set a fixed command that always runs, and you want to allow additional arguments to be passed in.
