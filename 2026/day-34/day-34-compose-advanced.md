@@ -30,23 +30,38 @@ Write a simple Dockerfile for the web app. The app doesn't need to be complex �
 
 **Test:** Bring everything down and up — does the app wait for the DB?
 
-![Output](images/task2.png)
+    - Postgres container starts first.
+    - Healthcheck waits until DB is ready.
+    - App container starts only after DB is healthy.
+
+ ![Output](images/task2.png)
 
 ---
 
 ### Task 3: Restart Policies
 
 1. Add `restart: always` to your database service
-2. Manually kill the database container — does it come back?
-3. Try `restart: on-failure` — how is it different?
-4. Write in your notes: When would you use each restart policy?
 
+    ![Output](images/task3-1.png)
+
+2. Manually kill the database container — does it come back?
+    - Yes, it back.
+3. Try `restart: on-failure` — how is it different?
+    - No restart.
+    ![Output](images/task3-2.png)
+
+4. Write in your notes: When would you use each restart policy?
+    `restart:always` Use When: Databases, Backend APIs, Production services, Anything that must always run
+
+r   `estart:on-failure` Use When: Data processing jobs One-time migration scripts
 ---
 
 ### Task 4: Custom Dockerfiles in Compose
 1. Instead of using a pre-built image for your app, use `build:` in your compose file to build from a Dockerfile
 2. Make a code change in your app
 3. Rebuild and restart with one command
+    [Dockerfile](my-app/Dockerfile)  
+    ![Output](images/task4.png)
 
 ---
 
@@ -54,13 +69,15 @@ Write a simple Dockerfile for the web app. The app doesn't need to be complex �
 1. Define **explicit networks** in your compose file instead of relying on the default
 2. Define **named volumes** for database data
 3. Add **labels** to your services for better organization
-
+  [Compose](my-app/docker-compose.yml)   
+  
 ---
 
 ### Task 6: Scaling (Bonus)
 1. Try scaling your web app to 3 replicas using `docker compose up --scale`
 2. What happens? What breaks?
 3. Write in your notes: Why doesn't simple scaling work with port mapping?
+   ![Output](images/task6.png)
 
 ---
 
