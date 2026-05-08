@@ -78,4 +78,4 @@ Check the size before and after.
 
 Dockerhub link: https://hub.docker.com/repository/docker/satyabrata21/java-multi-stage/general
 
-    [Dockerfile](Dockerfile.final)
+    [Dockerfile](day-35/Dockerfile.final)
