@@ -1,0 +1,45 @@
+services:
+  app:
+    #build: .
+    image: satyabrata21/world-app
+    container_name: world_app
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    networks:
+      - world_net
+    labels:
+       tier: "backend"
+    
+  postgres_db:
+    image: postgres:16-alpine
+    container_name: postgres_db
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    
+    volumes:
+      - world-data:/var/lib/postgresql/data
+    
+    networks:
+      - world_net
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: always
+
+volumes:
+  world-data:
+networks:
+  world_net:
+    driver: bridge
