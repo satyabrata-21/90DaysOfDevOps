@@ -12,7 +12,7 @@ Take a **one-day pause** to consolidate everything from Days 29–36 so Docker a
 ## Self-Assessment Checklist
 Mark yourself honestly — **can do**, **shaky**, or **haven't done**:
 
-- [ ] Run a container from Docker Hub (interactive + detached)
+- [can do] Run a container from Docker Hub (interactive + detached)
 - [ ] List, stop, remove containers and images
 - [ ] Explain image layers and how caching works
 - [ ] Write a Dockerfile from scratch with FROM, RUN, COPY, WORKDIR, CMD
